@@ -23,8 +23,8 @@ public class CacheController {
     @ResponseBody
     public Map<String,Object> cacheSave(HttpServletRequest request) {
         Map<String,Object> rtn = new HashMap<String,Object>();
-        String id = RequestUtil.getParameter(request,"id");
-        String value = RequestUtil.getParameter(request,"value");
+        String id = request.getParameter(id);
+        String value = request.getParameter(value);
         try {
             lruCache.put(id, value);
             rtn.put("status",200);
@@ -43,7 +43,7 @@ public class CacheController {
     @ResponseBody
     public Map<String,Object> cacheOut(HttpServletRequest request) {
         Map<String,Object> rtn = new HashMap<String,Object>();
-        String id = RequestUtil.getParameter(request,"id");
+        String id =  request.getParameter(id);
         try {
             rtn.put("status",200);
             rtn.put("request","成功");
