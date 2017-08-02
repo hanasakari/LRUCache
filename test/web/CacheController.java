@@ -25,8 +25,8 @@ public class CacheController {
     public Map<String,Object> cacheSave(HttpServletRequest request) {
         Map<String,Object> rtn = new HashMap<String,Object>();
         //获取传入的id和value
-        String id = request.getParameter(id);
-        String value = request.getParameter(value);
+        String id = request.getParameter("id");
+        String value = request.getParameter("value");
         try {
             //保存 id 和 value
             lruCache.put(id, value);
@@ -46,7 +46,7 @@ public class CacheController {
     @ResponseBody
     public Map<String,Object> cacheOut(HttpServletRequest request) {
         Map<String,Object> rtn = new HashMap<String,Object>();
-        String id =  request.getParameter(id);
+        String id =  request.getParameter("id");
         try {
             rtn.put("status",200);
             rtn.put("request","成功");
