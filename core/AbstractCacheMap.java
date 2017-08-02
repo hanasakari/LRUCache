@@ -37,7 +37,7 @@ abstract class AbstractCacheMap<K,V> implements LRUCacheImpl<K,V> {
     private final Lock readLock = cachelock.readLock(); //加锁
     private final Lock writeLock = cachelock.writeLock(); //改锁
 
-    protected int cacheSize; //缓存大小，[0,∞)/kb
+    protected int cacheSize; //缓存大小，[0,∞)/条
     protected boolean exisCustomExpire;//判断是否有设置过默认过期时间
 
     public int getFullSize(){
