@@ -7,6 +7,7 @@ import java.util.Map;
 /**
  * 实现缓存
  * 超过默认大小后自动删除尾部缓存数据
+ * 条和毫秒的单位
  */
 public class LRUCache<K, V> extends AbstractCacheMap<K, V> {
     public LRUCache(int cacheSize, long defaultExpire) {
