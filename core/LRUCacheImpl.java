@@ -4,8 +4,7 @@ package core;
  * Created by AmamiyaAsuka on 2017/7/25. from jodd.cache.LRU
  * 设置一个LRU的缓存
  * 这个缓存会抛弃超过存活时间没有被调用过的对象，或抛弃超过划定存储大小时抛弃在链表中最末端的对象
- * 缓存大小是缓存数据对象数目，不是内存大小
- * 线程安全测试中
+ * 缓存大小是缓存数据对象数目，不是内存大小，缓存时间为毫秒
  */
 //接口
 public interface LRUCacheImpl<K,V>{
