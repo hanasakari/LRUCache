@@ -17,7 +17,7 @@ import java.util.Map;
 @RequestMapping(value = "/cache")
 public class CacheController {
     //分配1000条缓存 并保存30分钟(1800000ms)
-    LRUCache lruCache = new LRUCache(50000, 1800000);
+    LRUCache lruCache = new LRUCache(1000, 1800000);
 
     @RequestMapping(value = "/save")
     @ResponseBody
